@@ -7,9 +7,8 @@ def maxSubArray(nums):
   for num in nums:
     
     if currentSum != None:
-      if num * -1 < currentSum:
-        currentSum += num
-      else:
+      currentSum += num
+      if currentSum < 1:
         currentSum = None
 
     else:
